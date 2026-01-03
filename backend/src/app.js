@@ -14,7 +14,7 @@ app.use(express.json());  // to parse JSON bodies
 app.use(cors({
     origin: [
       "http://localhost:5173",
-      "https://ecommerce-frontend.onrender.com"
+      "https://scalable-backend-system-1.onrender.com"
     ],
     credentials: true
   }));
