@@ -11,7 +11,13 @@ const app = express();
   
 // Middleware
 app.use(express.json());  // to parse JSON bodies
-app.use(cors());
+app.use(cors({
+    origin: [
+      "http://localhost:5173",
+      "https://ecommerce-frontend.onrender.com"
+    ],
+    credentials: true
+  }));
 app.use(morgan('dev')); 
 // app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));  // to read form data
