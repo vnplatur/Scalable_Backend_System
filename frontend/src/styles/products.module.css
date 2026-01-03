@@ -1,0 +1,60 @@
+.container {
+  padding: 30px;
+}
+
+.status {
+  padding: 30px;
+}
+
+.error {
+  padding: 30px;
+  color: red;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #e5e7eb;
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f1f5f9;
+}
+
+.table tr:hover {
+  background-color: #f9fafb;
+}
+
+.form {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 4px;
+}
+
+.formActions {
+  display: flex;
+  gap: 10px;
+}
+
+.delete {
+  color: red;
+  margin-left: 10px;
+}
+
+.warning {
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #fef3c7;
+  border-left: 4px solid #f59e0b;
+  color: #92400e;
+  border-radius: 4px;
+  font-size: 14px;
+}

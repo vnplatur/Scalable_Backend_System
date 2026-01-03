@@ -1,0 +1,62 @@
+.page {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8fafc;
+}
+
+.card {
+  width: 350px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #cbd5f5;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px;
+  background-color: #1e293b;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.footerText {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.footerText a {
+  color: #2563eb;
+  text-decoration: none;
+}

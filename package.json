@@ -1,0 +1,25 @@
+{
+  "name": "scalable_backend_system",
+  "version": "1.0.0",
+  "description": "A scalable and secure backend system built using **Node.js, Express, MongoDB**, featuring **JWT authentication, role-based authorization, product CRUD APIs, caching, logging, and Swagger documentation**.",
+  "main": "index.js",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnplatur/Scalable_Backend_System.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vnplatur/Scalable_Backend_System/issues"
+  },
+  "homepage": "https://github.com/vnplatur/Scalable_Backend_System#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

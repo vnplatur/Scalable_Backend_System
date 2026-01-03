@@ -1,0 +1,41 @@
+.container {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #f8fafc;
+}
+
+.tagline {
+  color: #64748b;
+  margin: 10px 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.primary,
+.secondary {
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.primary {
+  background: #1e293b;
+  color: white;
+}
+
+.secondary {
+  border: 1px solid #1e293b;
+  color: #1e293b;
+}
+
+.features p {
+  margin: 5px 0;
+}

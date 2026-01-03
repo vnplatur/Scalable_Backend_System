@@ -1,0 +1,156 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "E-Commerce Product API",
+    "version": "1.0.0",
+    "description": "Backend API for authentication and product management"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000/api/"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "BearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "BearerAuth": []
+    }
+  ],
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Register new user",
+        "tags": ["Auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "email", "password"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "User registered successfully" },
+          "400": { "description": "Validation error" }
+        }
+      }
+    },
+
+    "/auth/login": {
+      "post": {
+        "summary": "Login user",
+        "tags": ["Auth"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["email", "password"],
+                "properties": {
+                  "email": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Login successful" },
+          "401": { "description": "Invalid credentials" }
+        }
+      }
+    },
+
+    "/products": {
+      "get": {
+        "summary": "Get all products",
+        "tags": ["Products"],
+        "responses": {
+          "200": { "description": "List of products" }
+        }
+      },
+
+      "post": {
+        "summary": "Create product (Admin only)",
+        "tags": ["Products"],
+        "security": [{ "BearerAuth": [] }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": ["name", "price", "category"],
+                "properties": {
+                  "name": { "type": "string" },
+                  "description": { "type": "string" },
+                  "price": { "type": "number" },
+                  "category": { "type": "string" },
+                  "stock": { "type": "number" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Product created" },
+          "403": { "description": "Access denied" }
+        }
+      }
+    },
+
+    "/products/{id}": {
+      "get": {
+        "summary": "Get product by ID",
+        "tags": ["Products"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Product details" },
+          "404": { "description": "Product not found" }
+        }
+      },
+
+      "put": {
+        "summary": "Update product (Admin only)",
+        "tags": ["Products"],
+        "security": [{ "BearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Product updated" }
+        }
+      },
+
+      "delete": {
+        "summary": "Delete product (Admin only)",
+        "tags": ["Products"],
+        "security": [{ "BearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Product deleted" }
+        }
+      }
+    }
+  }
+}

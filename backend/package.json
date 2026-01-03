@@ -1,0 +1,37 @@
+{
+  "name": "scalable_backend_system",
+  "version": "1.0.0",
+  "description": "creating backend system with authentication process",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vnplatur/Scalable_Backend_System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vnplatur/Scalable_Backend_System/issues"
+  },
+  "homepage": "https://github.com/vnplatur/Scalable_Backend_System#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.1.0",
+    "morgan": "^1.10.1",
+    "nodemon": "^3.1.11",
+    "redis": "^5.10.0",
+    "swagger": "^0.7.5",
+    "swagger-ui-express": "^5.0.1",
+    "winston": "^3.19.0"
+  }
+}
