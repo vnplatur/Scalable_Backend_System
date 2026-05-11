@@ -65,8 +65,8 @@ project-root/
 ├── package.json        # Root scripts (run both apps)
 └── README.md           # Main project documentation
 
-✨ Features Implemented
-🔐 Authentication & Authorization
+### Features Implemented
+## Authentication & Authorization
 
 User Registration & Login
 
@@ -76,7 +76,7 @@ JWT token authentication
 
 Role-based access (Admin / User)
 
-📦 Product Management
+## Product Management
 
 Create, Read, Update, Delete products
 
@@ -86,7 +86,7 @@ User-only product viewing
 
 Pagination & search for scalability
 
-📊 Dashboard
+## Dashboard
 
 Personalized welcome message
 
@@ -96,7 +96,7 @@ Recent product activity
 
 Admin quick actions
 
-🎨 Frontend UI
+## Frontend UI
 
 Clean and responsive layout
 
@@ -106,14 +106,14 @@ Protected routes
 
 User-friendly forms & feedback
 
-▶️ Running the Project Locally
-🔹 Prerequisites
+### Running the Project Locally
+## Prerequisites
 
 Node.js (v18+ recommended)
 
 MongoDB (local or Atlas)
 
-🔹 One-Command Startup (Recommended)
+## One-Command Startup (Recommended)
 
 From the root directory:
 
@@ -127,7 +127,7 @@ Start backend on http://localhost:5000
 
 Start frontend on http://localhost:5173
 
-🔹 Manual Startup (Optional)
+## Manual Startup (Optional)
 Backend
 cd backend
 npm install
@@ -138,7 +138,7 @@ cd frontend
 npm install
 npm run dev
 
-🔧 Environment Variables
+## Environment Variables
 Backend (backend/.env)
 PORT=5000
 MONGO_URI=your_mongodb_connection
@@ -149,7 +149,7 @@ ADMIN_EMAIL=admin@test.com
 Frontend (frontend/.env)
 VITE_API_BASE_URL=http://localhost:5000/api/
 
-📘 API Documentation
+## API Documentation
 
 Swagger UI available at:
 
@@ -163,8 +163,7 @@ Auth APIs
 Product APIs
 
 Request/Response schemas
-
-🔒 Security Practices
+## Security Practices
 
 Password hashing using bcrypt
 
@@ -176,8 +175,20 @@ Input validation & sanitization
 
 Centralized error handling
 
+## Scalability Notes
 
-❗ Not Implemented
+Modular backend architecture
+
+API versioning (/api/v1)
+
+Pagination & filtering to handle large datasets
+
+Easy to extend into microservices
+
+Redis & Docker planned (not implemented as per scope)
+
+
+## Not Implemented
 
 Docker
 

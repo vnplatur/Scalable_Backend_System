@@ -134,17 +134,23 @@ const Products = () => {
           </tbody>
         </table>
       )}
-      <button
-        onClick={() => setPage((p) => Math.max(p - 1, 1))}
-        disabled={page === 1}>
-        Previous
-      </button>
-      <span>Page {page}</span>
-      <button
-        onClick={() => setPage((p) => p + 1)}
-        disabled={page * limit > total}>
-        Next
-      </button>
+      <div className={styles.pagination}>
+  <button
+    onClick={() => setPage((p) => Math.max(p - 1, 1))}
+    disabled={page === 1}
+  >
+    Previous
+  </button>
+
+  <span>Page {page}</span>
+
+  <button
+    onClick={() => setPage((p) => p + 1)}
+    disabled={page * limit > total}
+  >
+    Next
+  </button>
+</div>
     </div>
   );
 };

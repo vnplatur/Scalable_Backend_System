@@ -32,12 +32,7 @@ const Dashboard = () => {
     fetchSummary();
   }, []);
 
-  const handleSuccess = () => {
-    
-    
-    fetchProducts();
-  };
-
+ 
   return (
     <div className={styles.container}>
       <h1>Welcome, {user?.name?.split(" ")[0]} 👋</h1>

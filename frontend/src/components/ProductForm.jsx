@@ -80,10 +80,9 @@ const ProductForm = ({ initialData, onSuccess, onCancel }) => {
         onChange={handleChange}
         required
       />
-      <input
+      <textarea
         name="description"
-        type="textArea"
-        placeholder="description"
+        placeholder="Description"
         value={form.description}
         onChange={handleChange}
         required

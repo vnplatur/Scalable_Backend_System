@@ -46,7 +46,7 @@ const Register = () => {
         <h2>Create an account</h2>
 
         {error && <p className={styles.error}>{error}</p>}
-        {success && <p style={{ color: "green", textAlign: "center" }}>{success}</p>}
+        {success && <p className={styles.success}>{success}</p>}
 
         <form onSubmit={handleSubmit} className={styles.form}>
           <input
